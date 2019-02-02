@@ -5,8 +5,92 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WebhookLearning"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Webhook Learning" 
+        Height="450" Width="800"
+        ResizeMode="NoResize"
+        Margin="4"
+        >
     <Grid>
-        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40px"/>
+                <RowDefinition Height="35px"/>
+                <RowDefinition Height="25px"/>
+                <RowDefinition Height="35px"/>
+                <RowDefinition Height="25px"/>
+                <RowDefinition Height="35px"/>
+                <RowDefinition Height="25px"/>
+                <RowDefinition Height="3*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Channel ID" 
+                   HorizontalAlignment="Left" 
+                   Margin="14,4" 
+                   VerticalAlignment="Top" 
+                   Grid.Row="1"
+            />
+            <TextBox x:Name="ChannelID"
+                     Grid.Row="2" 
+                     VerticalAlignment="Top" 
+                     HorizontalAlignment="Left" 
+                     Width="220"
+                     Height="Auto" 
+                     Margin="14,4" 
+                     TextWrapping="NoWrap" 
+                     Text="123456789"
+            />
+
+
+            <Label Content="Webhook ID" 
+                   HorizontalAlignment="Left" 
+                   Margin="14,4" 
+                   VerticalAlignment="Top" 
+                   Grid.Row="3"
+            />
+            <TextBox x:Name="WebhookID"
+                     Grid.Row="4" 
+                     VerticalAlignment="Top" 
+                     HorizontalAlignment="Left" 
+                     Width="220"
+                     Height="Auto" 
+                     Margin="14,4" 
+                     TextWrapping="NoWrap" 
+                     Text="123456789"
+            />
+
+            <Label Grid.Column="1" 
+                   Grid.Row="1" 
+                   Content="Message:" 
+                   HorizontalAlignment="Left" 
+                   Margin="14,4" 
+                   VerticalAlignment="Top"
+            />
+            <TextBox x:Name="MessageBox"
+                     Grid.Column="1" 
+                     Grid.Row="2"
+                     VerticalAlignment="Top" 
+                     HorizontalAlignment="Left" 
+                     Margin="14,4" 
+                     TextWrapping="Wrap" 
+                     Text="Enter the message yoyu want to send here!" Width="514" Height="131" Grid.RowSpan="5" 
+            />
+            <Button Grid.Column="1" 
+                    Grid.Row="7" 
+                    Height="25px"
+                    Width="70"
+                    BorderBrush="Blue"
+                    BorderThickness="1px"
+                    
+                    Content="Send" 
+                    HorizontalAlignment="Right" 
+                    Margin="0,0,14,14" 
+                    VerticalAlignment="Bottom" 
+                    />
+
+        </Grid>
     </Grid>
 </Window>
